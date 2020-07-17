@@ -43,7 +43,7 @@ class LinkedList:
 # this is a poor method for a public class because node and prev could be anything. It would be hard to use, good
 # for a private method because its easy to write the function. 
 # started with the base case that as long as my node is not equal to none, then I have work to do. otherwise, my node
-# is the new head. 
+# is the new head. we visit the node before we recurse, so its preorder DFT
     def reverse_list(self, node, prev): 
         if node == None:
             self.head = prev
