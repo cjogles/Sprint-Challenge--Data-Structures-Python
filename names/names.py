@@ -14,18 +14,14 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-# for name_1 in names_1:
-#     for name_2 in names_2:
-#         if name_1 == name_2:
-#             duplicates.append(name_1)
+for name_1 in names_1:
+    for name_2 in names_2:
+        if name_1 == name_2:
+            duplicates.append(name_1)
 
 # my implementation
-list_names = names_1 + names_2
-bst = BSTNode(1)
-for i in list_names:
-    bst.insert(i)
-
-bst.contains('Lana Beltran')
+# maybe use bst for one of the lists
+# method on bst to maybe compare the second method. 
 
 
 end_time = time.time()
