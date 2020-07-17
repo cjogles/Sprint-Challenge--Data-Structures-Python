@@ -12,19 +12,17 @@ class BSTNode:
         if value < self.value:
             if self.left is None:
                 self.left = BSTNode(value)
-            elif self.left == self.value:
-                pass
             else:
                 self.left.insert(value)
 
         # case2 value is greater then or equal to self.value
-        elif value >= self.value:
+        elif value > self.value:
             if self.right is None:
                 self.right = BSTNode(value)
-            elif self.right == self.value:
-                pass
             else:
                 self.right.insert(value)
+        else:
+            pass # value is already present
 
     # Return True if the tree contains the value
     # False if it does not
