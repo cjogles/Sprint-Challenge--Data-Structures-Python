@@ -1,4 +1,5 @@
 import time
+from bst import BSTNode
 
 start_time = time.time()
 
@@ -13,14 +14,29 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
+
+# my implementation
+list_names = names_1 + names_2
+bst = BSTNode(1)
+for i in list_names:
+    bst.insert(i)
+
+bst.contains('Lana Beltran')
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
+
+# runtime complexity of original answer
+    # quadratic time or O(n squared) because for every value visited in names1.txt, we have to
+    # visit every single value of names2.txt. thats every input of names1 multiplied by 
+    # every value of names2. hence big o of n squared time. As the input increases, the number  
+    # of computations is exponentially growing. 
 
 # ---------- Stretch Goal -----------
 # Python has built-in tools that allow for a very efficient approach to this problem
